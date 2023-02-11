@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="quiz">
+    <span id="score">0</span>
+    <h2>What is <span id="firstNum">1</span> multiply by <span id="secondNum">2</span></h2>
+    <input type="text" id="userInput"> <br>
+    <button type="submit" id="btn-sub">Submit</button>
+  </div>
+  <script>
+
+    document.getElementById("btn-sub").onclick = function (){
+      let userIn = document.getElementById("userInput").value;
+      let getScore = document.getElementById("score");
+      let result = 1 * 2;
+      let counter = 0;
+      if(userIn == result){
+        counter++;
+        getScore.innerText = counter;
+      }
+    }
+  </script>
+</body>
+</html>
